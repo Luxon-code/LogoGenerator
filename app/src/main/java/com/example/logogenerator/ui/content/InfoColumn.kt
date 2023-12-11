@@ -29,7 +29,7 @@ fun InfoColumn(context: Context,viewModel: LogoGeneratorViewModel){
         }
         if (viewModel.info.isNotEmpty()){
             actionButton(text = "Resumir", icon = Icons.Filled.Compress, description = "Resumir grabacion") {
-                //Click
+                viewModel.createInfoSummary()
             }
             Text(text = viewModel.info)
         }

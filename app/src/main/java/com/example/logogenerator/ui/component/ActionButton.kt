@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 
 @Composable
-fun actionButton(text:String,icon:ImageVector,description:String,onClick:()->Unit){
-    Button(onClick = onClick, modifier = Modifier.fillMaxWidth()) {
+fun actionButton(text:String,icon:ImageVector,enabled:Boolean = true,description:String,onClick:()->Unit){
+    Button(onClick = onClick, modifier = Modifier.fillMaxWidth(),enabled = enabled) {
         Text(text = text)
         Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
         Icon(icon, contentDescription = description, modifier = Modifier.size(ButtonDefaults.IconSize))
